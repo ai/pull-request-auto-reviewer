@@ -37431,7 +37431,6 @@ const fs = __nccwpck_require__(7147);
 async function run() {
   try {
     const diffData = fs.readFileSync('my_diff.txt', "utf8");
-
     console.log('');
     console.log('data type:', typeof diffData);
     console.log('diff data: ', diffData);
@@ -37457,7 +37456,7 @@ async function run() {
     const token = core.getInput("token");
     console.log("token extracted");
     const octokit = github.getOctokit(token);
-    console.log('oktokit extracted');
+    console.log('octokit extracted');
     const context = github.context;
     console.log('context extracted');
     const pullNumber = Number(fs.readFileSync('pr_number.txt', "utf8"));
